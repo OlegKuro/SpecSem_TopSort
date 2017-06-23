@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<title>
+			Топологическая сортировка (DFS)
+		</title>
+		
+		<!-- css sheet for how the page is laid out -->
+		
+		<link rel="stylesheet" href="styles.css">
+			
+			
+		<!-- всё-таки немного jQuery .но он только для ползунка скорости анимации. можно и без него -->
+		<link rel="stylesheet" href="ThirdParty/jquery-ui-1.8.11.custom.css">
+				
+		<script src="jQuery/jquery-1.5.2.min.js"></script>
+		<script src="jQuery/jquery-ui-1.8.11.custom.min.js"></script>
+				
+		<!-- основной код -->
+
+		<!-- анимация -->
+		<script type = "text/javascript" src = "Anim/CustomEvents.js"> </script>
+		<script type = "text/javascript" src = "Anim/UndoFunctions.js"> </script>
+		<script type = "text/javascript" src = "Anim/AnimatedObject.js"> </script>
+		<script type = "text/javascript" src = "Anim/AnimatedLabel.js"> </script>
+		<script type = "text/javascript" src = "Anim/AnimatedCircle.js"> </script>
+		<script type = "text/javascript" src = "Anim/AnimatedRectangle.js"> </script>
+		<script type = "text/javascript" src = "Anim/AnimatedLinkedList.js"> </script>
+		<script type = "text/javascript" src = "Anim/HighlightCircle.js"> </script>
+		<script type = "text/javascript" src = "Anim/Line.js"> </script>
+		<script type = "text/javascript" src = "Anim/ObjectManager.js"> </script>
+		<script type = "text/javascript" src = "Anim/AnimationMain.js"> </script>
+		
+		<!-- логика -->
+		<script type = "text/javascript" src = "Algo/Algorithm.js"> </script>
+		<script type = "text/javascript" src = "Algo/Graph.js"> </script>
+		<script type = "text/javascript" src = "Algo/TopSort.js"> </script>
+				
+			
+	 </head> 
+	
+	<body onload="init();" class="VisualizationMainPage">
+		
+		<div id = "container">
+			
+			<div id="header">  
+				<h1>Топологическая сортировка (DFS). Хаятов Олег А3201</h1>
+			</div>
+			
+			<div = id = "mainContent"> 
+				
+				<div id = "algoControlSection">
+					<!-- таблица управления алгоритмом (ну, можно и без нее) и управления размером графа-->
+					<!-- заполняется скриптом -->
+					<table id="AlgorithmSpecificControls"> </table> 
+				</div>
+				
+					<!-- холст для анимации. можно сменить размер -->
+									
+				<canvas id="canvas" width="1000" height="500"></canvas>
+				
+				<div id = "generalAnimationControlSection">
+					<!-- таблица управления анимацией (play/pause/undo/etc) ->
+					<!-- см. AnimationMain.js  -->
+
+					<table id="GeneralAnimationControls">  </table>		
+				</div>
+				
+			</div> 
+			
+			<div id="footer">  
+			</div>
+
+		</div><!-- конец контейнера -->
+	</body>
+</html>
